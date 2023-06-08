@@ -27,7 +27,7 @@ body {
 
 .dotted {
 	text-decoration: underline dotted;
-	text-decoration-color: #FFE5FC;
+	text-decoration-color: #FF5020;
 }
 
 .script {
@@ -38,11 +38,23 @@ body {
 
 .decor-hr {
 	display: inline-flex;
-	width: 28%;
+	width: 100%;
 	border-top: none;
 	border-bottom: 5px dotted #FF5020;
 	float: right;
-	margin-top: 2em;
+	margin-top: 2.25em;
+}
+
+.multicolor {
+    background-image: linear-gradient(to left, #FF5020, #BF8FE4);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+abbr {
+	text-decoration: none;
 }
 
 .logo-icon {
