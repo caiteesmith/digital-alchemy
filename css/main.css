@@ -161,10 +161,8 @@ abbr {
 .services-card {
 	width: 90%;
 	background: rgba(255, 229, 252, 0.5);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 7px );
     -webkit-backdrop-filter: blur( 7px );
-    border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 	border-radius: 1em;
 	padding: 1.5em 1.5em 1em 1.5em;
@@ -193,7 +191,7 @@ abbr {
 	padding-left: 1em;
 	width: 45%;
 	float: left;
-	border-left: 2px solid #BF8FE4;
+	border-left: 2px solid #AAC5FE;
 }
 
 .services-card li {
@@ -212,7 +210,7 @@ abbr {
 }
 
 .services-icon .bi {
-	color: #BF8FE4;
+	color: #AAC5FE;
 	font-size: 65px;
 	text-align: center;
 	margin: 0;
@@ -312,6 +310,13 @@ abbr {
     -webkit-backdrop-filter: blur( 7px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+	transition: all 0.25s ease-out;
+}
+
+.work-card:hover {
+	background-color: rgba(255, 229, 252, 0.5);
+	transition: all 0.25s ease-out;
+	width: 100%;
 }
 
 .gh-logo {
@@ -331,6 +336,10 @@ abbr {
 .asw-logo {
 	width: 100px;
 	margin: 1.5em;
+}
+
+.work .bi-check-square-fill {
+	color: #FFE5FC;
 }
 
 .btn-link {
@@ -425,6 +434,11 @@ abbr {
 	padding-left: 0;
 }
 
+.about .bi-check-circle-fill {
+	margin-right: 0.5em;
+	color: #BF8FE4;
+}
+
 .about a {
 	color: inherit;
 }
@@ -480,6 +494,7 @@ abbr {
 }
 
 .contact {
+	color: #393939;
 	position: relative;
 	margin-top: 0;
 	background-color: #FF5020;
@@ -491,12 +506,32 @@ abbr {
 	background-color: rgba(255, 229, 252, 0.85);
 }
 
-.magic-3d {
-	width: 200px;
-	margin-bottom: 2em;
-	transform: rotate(-10deg);
+input[type="radio"],
+input[type="checkbox"] {
+ 	box-sizing: border-box;
+	margin-right: 1em;
+	height: 25px;
+	width: 25px;
 }
 
+label {
+	font-weight: 600;
+}
+
+.form-check-label {
+	font-weight: inherit;
+	margin-left: 0.75em;
+	margin-top: 0.35em;
+}
+
+.magic-3d {
+	float: right;
+	width: 200px;
+	margin-bottom: 2em;
+	transform: rotate(10deg);
+}
+
+/* FOOTER SECTION */
 footer {
 	position: relative;
 	display: flex;
