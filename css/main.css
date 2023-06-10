@@ -30,6 +30,11 @@ body {
 	text-decoration-color: #FF5020;
 }
 
+.dotted-lt {
+	text-decoration: underline dotted;
+	text-decoration-color: #FFE5FC;
+}
+
 .script {
 	font-family: 'Pacifico', cursive;
 	color: inherit;
@@ -177,14 +182,25 @@ abbr {
 	width: 100%;
 }
 
-.ss2 {
+.services-card-rt {
 	width: 90%;
 	margin-left: 6em;
+	transition: all 0.25s ease-out;
 }
 
-.ss2:hover {
+.services-card-rt:hover {
 	width: 100%;
 	margin-left: 0;
+	transition: all 0.25s ease-out;
+}
+
+.services-card-bad {
+	width: 100%;
+	border-radius: 1em;
+	padding: 1.5em 1.5em 1em 1.5em;
+	margin: 2em 0;
+	box-shadow: rgba(0, 0, 0, 0.25 ) 0px 2px 4px 0px inset;
+	transition: all 0.25s ease-out;
 }
 
 .services-card ul {
@@ -218,6 +234,24 @@ abbr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.synopsis {
+	border-left: 5px dotted rgba(255, 229, 252, 0.5);
+	padding-left: 2em;
+}
+
+.synopsis h4 {
+	line-height: 2;
+}
+
+.synopsis-row {
+	padding-top: 2em;
+}
+
+.dream-big {
+	width: 100%;
+	transform: rotate(-15deg);
 }
 
 /* PROCESS SECTION */
@@ -271,7 +305,7 @@ abbr {
 }
 
 .design-process-icon {
-	width: 200px;
+	width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -316,6 +350,10 @@ abbr {
 .work-card:hover {
 	background-color: rgba(255, 229, 252, 0.5);
 	transition: all 0.25s ease-out;
+	width: 100%;
+}
+
+.logo-icon-3d {
 	width: 100%;
 }
 
@@ -443,6 +481,23 @@ abbr {
 	color: inherit;
 }
 
+.profile {
+	width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.profile-frame {
+    width: 100%;
+    position: absolute;
+    top: ;
+    left: ;
+    z-index: 2;
+    animation: rotation 60s infinite linear;
+}
+
 .bi-linkedin {
 	color: inherit;
 	font-size: 1.75em;
@@ -450,11 +505,6 @@ abbr {
 
 .ilyl {
 	width: 100%;
-}
-
-.dream-big {
-	width: 250px;
-	transform: rotate(15deg);
 }
 
 .bi-check-square {
@@ -497,12 +547,13 @@ abbr {
 	color: #393939;
 	position: relative;
 	margin-top: 0;
-	background-color: #FF5020;
+    background-color: #ff5020;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23ffd0c3' fill-opacity='0.15'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 	padding: 2em 0;
 }
 
 .contact-jumbotron {
-	margin: 3em 0;
+	margin: 3em 0 5em 0;
 	background-color: rgba(255, 229, 252, 0.85);
 }
 
@@ -525,9 +576,9 @@ label {
 }
 
 .magic-3d {
-	float: right;
-	width: 200px;
-	margin-bottom: 2em;
+/*	float: center;*/
+	width: 100%;
+	margin-top: 2em;
 	transform: rotate(10deg);
 }
 
@@ -828,5 +879,14 @@ footer {
   100% {
     -webkit-box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
