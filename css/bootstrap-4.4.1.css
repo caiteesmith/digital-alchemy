@@ -53,6 +53,7 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -68,6 +69,7 @@ body {
   color: #212529;
   text-align: left;
   background-color: #BF8FE4;
+	overflow-x: hidden;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
