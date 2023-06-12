@@ -8,11 +8,42 @@
   --purple: #BF8FE4; /* rgba(191, 143, 228, 0.5) */
   --babyblue: #AAC5FE; /* rgba(170, 197, 254, 0.5) */
   --chartreuse: #E1FC2C; /* rgba(225, 252, 44, 0.5) */
+  --font: #393939;
 }
 
 body {
 	background-color: #BF8FE4;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.hidden {
+	opacity: 0;
+	filter: blur(5px);
+	transform: translateX(-100%);
+	transition: all 1.25s;
+}
+
+.show {
+	opacity: 1;
+	filter: blur(0);
+	transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+	.hidden {
+		transition: none;
+	}
+	
+	.profile-frame {
+		animation: none;
+	}
+}
+
+.hero-bg {
+  background-position: center;
+  background: url("../images/background/gradient.jpg");
+  background-size: cover;
 }
 
 .wavy {
@@ -173,25 +204,25 @@ abbr {
 	padding: 1.5em 1.5em 1em 1.5em;
 	margin: 2em 0;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-	transition: all 0.25s ease-out;
+/*	transition: all 0.25s ease-out;*/
 }
 
 .services-card:hover {
 	background-color: rgba(255, 229, 252, 0.75);
-	transition: all 0.25s ease-out;
+/*	transition: all 0.25s ease-out;*/
 	width: 100%;
 }
 
 .services-card-rt {
 	width: 90%;
 	margin-left: 6em;
-	transition: all 0.25s ease-out;
+/*	transition: all 0.25s ease-out;*/
 }
 
 .services-card-rt:hover {
 	width: 100%;
 	margin-left: 0;
-	transition: all 0.25s ease-out;
+/*	transition: all 0.25s ease-out;*/
 }
 
 .services-card-bad {
@@ -200,7 +231,7 @@ abbr {
 	padding: 1.5em 1.5em 1em 1.5em;
 	margin: 2em 0;
 	box-shadow: rgba(0, 0, 0, 0.25 ) 0px 2px 4px 0px inset;
-	transition: all 0.25s ease-out;
+/*	transition: all 0.25s ease-out;*/
 }
 
 .services-card ul {
@@ -252,6 +283,8 @@ abbr {
 .dream-big {
 	width: 100%;
 	transform: rotate(-15deg);
+	filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.5));
+
 }
 
 /* PROCESS SECTION */
@@ -310,6 +343,8 @@ abbr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+	filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.25));
+
 }
 
 /* WORK SECTION */
@@ -336,6 +371,7 @@ abbr {
 .work-card {
 	border-radius: 15px;
 	color: #fff;
+	height: 100%;
 	padding: 1em 2em;
 	margin-bottom: 4em;
 	background: rgba( 255, 229, 252, 0.35 );
@@ -344,17 +380,19 @@ abbr {
     -webkit-backdrop-filter: blur( 7px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-	transition: all 0.25s ease-out;
+/*	transition: all 0.25s ease-out;*/
 }
 
 .work-card:hover {
 	background-color: rgba(255, 229, 252, 0.5);
 	transition: all 0.25s ease-out;
 	width: 100%;
+	transition: all 0.25s ease-out;
 }
 
 .logo-icon-3d {
 	width: 100%;
+	filter: drop-shadow(2px 2px 5px rgb(0 0 0 / 0.25));
 }
 
 .gh-logo {
@@ -362,14 +400,36 @@ abbr {
 	margin: 2em;
 }
 
-.gh-work, .asw-work {
+.work-img {
 	width: 100%;
 	height: 285px;
 /*	border: 5px solid #FFE5FC;*/
 	border-radius: 10px 10px 5px 5px;
 	margin-bottom: 2em;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+	filter: grayscale(100%);
+	z-index: 1;
 }
+
+.work-img:hover {
+	-webkit-filter: none; /* Safari 6.0 - 9.0 */
+	filter: none;
+}
+
+/*
+.work-overlay {
+	background-color: rgba(255, 80, 32, 0.75);
+	color: #fff;
+	padding: 0.5em;
+	border-radius: 0 15px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    z-index: 2;
+}
+*/
 
 .asw-logo {
 	width: 100px;
@@ -492,8 +552,8 @@ abbr {
 .profile-frame {
     width: 100%;
     position: absolute;
-    top: ;
-    left: ;
+    top: 0;
+    left: 0;
     z-index: 2;
     animation: rotation 60s infinite linear;
 }
@@ -623,6 +683,118 @@ footer {
 
 .socials a {
 	color: #EA5781;
+}
+
+@media (max-width: 991.98px) {
+	.services-card {
+		width: 100%;
+		margin: 2em 0;
+	}
+
+	.services-card-rt {
+		width: 100%;
+		margin-left: 0;
+	}
+	
+	.process .col-sm-6 {
+		-ms-flex: 0 0 33.333333%;
+    	flex: 0 0 33.333333%;
+    	max-width: 33.333333%;
+	}
+	
+	.decor-hr {
+		display: none;
+	}
+	
+	.ceo-title {
+		display: none;
+	}
+	
+	.magic-3d {
+		display: none;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.services-icon {
+		display: none;
+	}
+	
+	.col-md-9 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+	
+	.services-card ul {
+        padding-left: 0.5em;
+        width: 50%;
+        float: left;
+        border-left: 2px solid #AAC5FE;
+    }
+	
+	.dream-big {
+		display: none;
+	}
+	
+	.process .col-9 {
+		-ms-flex: 0 0 100%;
+    	flex: 0 0 100%;
+    	max-width: 100%;
+	}
+	
+	.design-process-icon {
+		display: none;
+	}
+	
+	.process .col-sm-6 {
+		-ms-flex: 0 0 100%;
+    	flex: 0 0 100%;
+    	max-width: 100%;
+		border-bottom: 1px solid rgba(255, 229, 252, 0.15);
+		margin: 1em 0;
+	}
+	
+	.process .process-icon {
+		float: left;
+		margin: 0 1em 0.5em 0;
+	}
+	
+	.work-card .col-sm-6 {
+		-ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+		border-bottom: 1px solid rgba(255, 229, 252, 0.15);
+	}
+	
+	.work .col-10 {
+		-ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+	}
+	
+	.logo-icon-3d {
+		display: none;
+	}
+	
+	.about .col-9 {
+		-ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+	}
+	
+	.profile {
+		position: relative;
+	}
+	
+	.profile-frame {
+		width: 57%;
+/*		display: none;*/
+	}
+	
+	.footer-icon {
+		display: none;
+	}
 }
 
 /* CSS ANIMATIONS */
