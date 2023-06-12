@@ -15,6 +15,7 @@ body {
 	background-color: #BF8FE4;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+	scrollbar-color: auto;
 }
 
 .hidden {
