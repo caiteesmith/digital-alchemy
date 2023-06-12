@@ -42,9 +42,11 @@ body {
 }
 
 .hero-bg {
-    background-position: center;
     background: url("../images/background/gradient.jpg");
-    background-size: cover;
+    background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .wavy {
