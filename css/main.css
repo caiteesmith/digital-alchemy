@@ -862,6 +862,21 @@ footer {
 		font-size: 6vw;
     }
 	
+	.services-card {
+		padding-bottom: 1.5em;
+	}
+	
+	.services-card h2 {
+		font-size: 5vw;
+	}
+	
+	.services-card ul {
+        padding-left: 1em;
+        width: 100%;
+        float: none;
+		margin-bottom: 0;
+    }
+	
 	.profile {
         width: 100%;
     }
@@ -875,6 +890,17 @@ footer {
 	.banner h2 {
         transform: rotate(7deg);
 		font-size: 6vw;
+    }
+	
+	.services-card h2 {
+		font-size: 6vw;
+	}
+	
+	.services-card ul {
+        padding-left: 1em;
+        width: 100%;
+        float: none;
+        border-left: 2px solid #AAC5FE;
     }
 }
 
