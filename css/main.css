@@ -697,6 +697,24 @@ footer {
 	color: #EA5781;
 }
 
+@media (min-width: 1200px) {
+	.profile {
+		width: 100%;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		z-index: 1;
+	}
+
+.profile-frame {
+		width: 92%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+}
+
 @media (max-width: 991.98px) {
 	.services-card {
 		width: 100%;
