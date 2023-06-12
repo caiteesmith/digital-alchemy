@@ -743,6 +743,23 @@ footer {
 		display: none;
 	}
 	
+	.profile {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    .profile-frame {
+        width: 88%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        animation: rotation 60s infinite linear;
+    }
+	
 	.ceo-title {
 		display: none;
 	}
@@ -844,6 +861,14 @@ footer {
         transform: rotate(6deg);
 		font-size: 6vw;
     }
+	
+	.profile {
+        width: 100%;
+    }
+
+    .profile-frame {
+        width: 290px;
+    }
 }
 
 @media (max-width: 475.98px) {
@@ -857,6 +882,14 @@ footer {
 	.banner h2 {
         transform: rotate(8deg);
 		font-size: 6vw;
+    }
+	
+	.profile {
+        display: none;
+    }
+
+    .profile-frame {
+        display: none;
     }
 }
 
