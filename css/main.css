@@ -421,6 +421,7 @@ abbr {
 .work-img {
 	width: 100%;
 	height: 285px;
+	max-height: 100%;
     object-fit: cover;
 /*	border: 5px solid #FFE5FC;*/
 	border-radius: 10px 10px 5px 5px;
