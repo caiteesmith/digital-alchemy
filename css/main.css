@@ -42,11 +42,11 @@ body {
 }
 
 .hero-bg {
-    background: url("../images/background/gradient.jpg");
+    background: url("../images/background/gradient-dec.jpg");
     background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
 }
 
 .wavy {
@@ -213,7 +213,7 @@ abbr {
 
 .services-card:hover {
 	background-color: rgba(255, 229, 252, 0.75);
-/*	transition: all 0.25s ease-out;*/
+	transition: all 0.25s ease-out;
 	width: 100%;
 }
 
@@ -238,6 +238,7 @@ abbr {
 /*	transition: all 0.25s ease-out;*/
 }
 
+/*
 .services-card:nth-child(2) {
 	transition-delay: 200ms;
 }
@@ -249,6 +250,7 @@ abbr {
 .services-card:nth-child(4) {
 	transition-delay: 600ms;	
 }
+*/
 
 .services-card ul {
 	padding-left: 1em;
@@ -669,6 +671,10 @@ footer {
 	line-height: 20px;
 }
 
+footer a {
+	color: #393939;
+}
+
 .footer-logo {
 	margin-bottom: 1.25em;
 	width: 150px;
@@ -767,6 +773,10 @@ footer {
 	}
 	
 	.magic-3d {
+		display: none;
+	}
+	
+	.footer-icon, .footer-build br {
 		display: none;
 	}
 }
@@ -918,6 +928,15 @@ footer {
 
     .profile-frame {
         display: none;
+    }
+	
+	.socials {
+        width: 100%;
+        font-size: 8vw;
+    }
+
+    .socials li {
+        margin: 0.5em 1em 0.5em 0;
     }
 }
 
