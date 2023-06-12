@@ -840,7 +840,21 @@ footer {
 
 @media (max-width: 575.98px) {
 	.banner h2 {
-        transform: rotate(5deg);
+        transform: rotate(6deg);
+		font-size: 6vw;
+    }
+}
+
+@media (max-width: 475.98px) {
+	.banner h2 {
+        transform: rotate(7deg);
+		font-size: 6vw;
+    }
+}
+
+@media (max-width: 375.98px) {
+	.banner h2 {
+        transform: rotate(8deg);
 		font-size: 6vw;
     }
 }
